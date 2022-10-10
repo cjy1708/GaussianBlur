@@ -175,8 +175,8 @@ Java_com_ziyuanrenjianjinhao_gaussianblur_MainActivity_gaussianBlur(JNIEnv *env,
         }
     }
 
-    LOGD("变化前数值：%d, 变化后数值：%d", c_pixels[600 * new_width + 600], c_new_pixels[(600 - translate) * width + 600 - translate])
-    LOGD("变化前数值：%d, 变化后数值：%d", c_pixels[800 * new_width + 800], c_new_pixels[(800 - translate) * width + 800 - translate])
+    LOGD("(599, 599)变化前数值：%d, 变化后数值：%d", c_pixels[600 * new_width + 600], c_new_pixels[(600 - translate) * width + 600 - translate])
+    LOGD("(799, 799)变化前数值：%d, 变化后数值：%d", c_pixels[800 * new_width + 800], c_new_pixels[(800 - translate) * width + 800 - translate])
     env->SetIntArrayRegion(pixels, 0, pixels_len, c_new_pixels.release());
 
     LOGD("call gaussian blur: success")

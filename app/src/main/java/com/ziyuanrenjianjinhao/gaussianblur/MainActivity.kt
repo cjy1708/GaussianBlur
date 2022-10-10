@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         thread {
-            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.pic2)
+            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.pic)
             val bitmapGaussianBlur =
                 Bitmap.createBitmap(bitmap.width, bitmap.height, Bitmap.Config.ARGB_8888)
-            var bitmapIntArray = IntArray(bitmap.width * bitmap.height)
+            val bitmapIntArray = IntArray(bitmap.width * bitmap.height)
             bitmap.getPixels(bitmapIntArray, 0, bitmap.width, 0, 0, bitmap.width, bitmap.height)
             val bitmapSource = intArrayOf(*bitmapIntArray)
             Log.d("CJY", "变化前(599, 599)：${bitmapIntArray[599 * bitmap.width + 599].toString()}")
